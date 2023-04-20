@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+
+max-width: 200%;
+    min-width: 10%;
+    height: 100vh;
+font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    max-width: 100%;
+    height: 100px;
+    
+    font-size: 20px;
+    
+}
+main{
+    max-width: 100%;
+    max-height: 100vh;
+    display: block;
+
+text-align: center;
+
+}
+header h2{
+  
+    
+    position: absolute;
+    
+    
+    left: 9%;
+    top: 40px;
+    
+    display: inline;
+}
+.t{
+    
+    position: absolute;
+    left: 8%;
+    color: #00B2FF;
+
+}
+
+.descricao{
+   width: 30%;
+   height: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+    
+}
+.buttons{
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+   width: 20%;
+   height: 30px;
+   margin-top: 10%;
+  
+}
+button{
+   margin: 6px;
+    background-color: #00B2FF;
+border-radius: 5px;
+    color: white;
+    width: 179px;
+height: 35px;
+border: none;
+cursor: pointer;
+}
+.buttons p{
+    font-size: 13px;
+    margin-top: 5px;
+
+}
+
+.form{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+   
+  
+}
+
+.input{
+
+width: 15%;
+margin-left: auto;
+    margin-right: auto;
+
+
+}
+.input input{
+outline: none;
+
+border-radius: 10px;
+padding: 5px;
+width: 100%;
+height: 40px;
+
+color: black;
+
+
+}
