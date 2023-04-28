@@ -15,46 +15,68 @@ header{
     width: 100%;
     height: 40px;
     color: #ffffff;
+    text-align: center;
     align-items: center;
     justify-content: space-between;
     display: flex;
    
+   
 }
+h3{
+    justify-content: space-between;
+    display: inline;
+    margin: 20px;
+}
+
 .logo{
     margin-left: 10px;
 }
 .boxtop{
     width: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     
-    height: 20vh;
+    text-align: center;
+    
+    
+    height: 94vh;
     background: #ffffff;
    
     border-color: #dbdbdb;
     border-style: solid;
     border-top: none;
     border-width: 2px;
-  
-    
-
-}
  
-.boxdown{
-    width: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    height: 100vh;
-    background: #ffffff;
-   
-    border-color: #dbdbdb;
-    border-style: solid;
-    border-top: none;
-    border-width: 2px;
 }
+.links{
+   height: 20px;
+}
+a{
+display: block;
+margin: 15px;
+text-decoration: none;
+color: #000000;
+}
+
+.boxtop button{
+    width: 70%;
+    height: 8vh;
+    padding: 16px 0px;
+    margin: 25px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+    background: #00B2FF;
+    cursor: pointer;
+    
+    margin-top: 15%;
+}
+.sobre{
+
+    margin-top: 65vh;
+}
+.sobre a{ color: #00B2FF;}
 .main-login{
     width: 100vw;
     height: 100vh;
