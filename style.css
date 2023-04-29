@@ -59,7 +59,7 @@ color: #000000;
 .boxtop button{
     width: 70%;
     height: 8vh;
-    padding: 16px 0px;
+   
     margin: 25px;
     border-radius: 8px;
     border: none;
@@ -79,7 +79,7 @@ color: #000000;
 
     margin-top: 65vh;
 }
-.sobre a{ color: #00B2FF;}
+.sobre a{ color: #000000;}
 .main-login{
     width: 100vw;
     height: 100vh;
@@ -168,7 +168,7 @@ color: #000000;
 .btn-login{
    
     width: 100%;
-    padding: 16px 0px;
+   
     margin: 25px;
     border-radius: 8px;
     border: none;
@@ -195,7 +195,7 @@ color: #000000;
 }
 .cadastre-se {
     color: #00B2FF;
-    cursor: pointer;
+    
     
 }
 .começar{
@@ -207,6 +207,12 @@ color: #000000;
 .btn-login, .opcoes{
     margin: 10px;
 
+}
+.links a{
+    color: #000000;
+}
+a{
+    color: white;
 }
 container{
     width: 80%;
