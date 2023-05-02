@@ -1,1 +1,0 @@
-# tNotes-retyrty
