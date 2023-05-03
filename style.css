@@ -40,6 +40,7 @@ h3{
     border-width: 0.5px;
     border-color: #c5c5c5;
     outline: none;
+    border-style:double;
     text-transform: uppercase;
     background-color: white;
     cursor: pointer;
