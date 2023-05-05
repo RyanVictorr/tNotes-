@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" class="left-login-image" href="style.css">
     <link rel="icon" href="tnotes.ico">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Home</title>
     <meta name="Pagina de login" content="Pagina de loginda plataforma tNotes">
 </head>
@@ -19,10 +21,10 @@
  
    
 </header>
-<main>
+<main >
     <div class="divleft">
-    <div class="boxtop">
-        <button class="button"> <a href="#"> + Novo</a></button>
+    <div class="boxleft">
+        <button onclick="acao()" class="button"> <a href="#"> + Novo</a></button>
         <div class="links">
 
       <button class="tg"><a href="#"> Grupos</a></button>
@@ -35,7 +37,34 @@
     
 
     </div>
+    <div  class="modal">
+        <div onclick="fechar()" class="fechar"><h2>X</h2></div>
+        
+        <div class="tarefas">
+            <h2>Criar nova tarefa</h2>
+            <input type="text" 
+            id="novaTarefa"
+            placeholder="Adicione uma nova tarefa">
+            <button id="btnAddTarefa">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+        <ul id="listaTarefa">
+            <li>
+                <span class="textoTarefa">Tarefa 1</span>
+                <div class="b">
+                    <button class="btnAcao">
+                        <i class="fa fa-pencil"></i>
+                    </button>
+                    <button class="btnAcao2">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
 </main>
+
 
 </body>
 </html>
