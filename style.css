@@ -65,6 +65,10 @@ h3{
 .divleft{
     width: 20%;
 }
+.divright{
+    width: 100%;
+    height: 93vh;
+}
 .links{
    margin-top: 40px;
    height: 10px;
@@ -144,7 +148,7 @@ a{
         border-width: 2px;
         border-radius: 10px;
         padding: 10px;
-        
+        max-width: 100%;
       margin-top: 50px;
         
         color: black;
@@ -171,6 +175,13 @@ a{
     list-style-type: none;
     padding: 0;
     margin: 0;
+    
+    
+}
+#lixeira{
+    background: red;
+}
+#listaTarefa li{
     margin-left: 22%;
     margin-top: 20px;
     border-radius: 10px;
@@ -180,16 +191,6 @@ a{
     display: flex;
     align-items: center;
     text-align: center;
-  
-    
-}
-#lixeira{
-    background: red;
-}
-#listaTarefa li{
-    display: flex;
-    margin-left:10%;
-
   
 }
 .btnAcao{
@@ -570,5 +571,15 @@ a{
 @media only screen and (max-width: 950px){
     .card-login{
         width: 85%;
+    }
+}
+@media only screen and (max-width: 500px){
+    .divleft{
+          width: 50%;
+    }
+}
+@media only screen and (max-width: 700px){
+    .modal{
+          width: 80%;
     }
 }
