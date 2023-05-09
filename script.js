@@ -1,15 +1,10 @@
 function acao() {
    let modal= document.querySelector('.modal')
     modal.style.display="block";
-     
- }
- function fechar(){
-     let modal= document.querySelector('.modal')
-    modal.style.display="none";
- }
- let novaTarefa = document.querySelector('#novaTarefa');
+
+     let novaTarefa = document.querySelector('#novaTarefa');
  let btnAddTarefa = document.querySelector('#btnAddTarefa');
- let listaTarefa = document.querySelector('#listaTarefa');
+ let listaTarefa = document.querySelector('.content');
  
  novaTarefa.addEventListener('keypress', (e)=>{
     if(e.keycode==13){
@@ -17,7 +12,7 @@ function acao() {
        nome: novaTarefa.value, 
        id:gerarId(),
     }
-       adicionarTarefa('tarefa');
+       adicionarTarefa(tarefa);
  }});
  
  
@@ -26,7 +21,7 @@ function acao() {
        nome:novaTarefa.value,
        id:gerarId(),
     }
-    adicionarTarefa('tarefa');
+    adicionarTarefa(tarefa);
    
  });
  
@@ -60,4 +55,11 @@ function acao() {
     li.appendChild(span);
     li.appendChild(div);
     return li;
+ }
+
+     
+ }
+ function fechar(){
+     let modal= document.querySelector('.modal')
+    modal.style.display="none";
  }
