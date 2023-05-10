@@ -5,7 +5,7 @@ function acao() {
      let novaTarefa = document.querySelector('#novaTarefa');
  let btnAddTarefa = document.querySelector('#btnAddTarefa');
  let listaTarefa = document.querySelector('.content');
- 
+
  novaTarefa.addEventListener('keypress', (e) => {
    if (e.keyCode === 13) {
       let tarefa = {
@@ -50,9 +50,9 @@ function acao() {
     btnExcluir.innerHTML='<i class="fa fa-trash"></i>';
  
     btnExcluir.addEventListener('click', () => {
-    li.remove();
-    }); 
-    
+      li.remove();
+   });   
+
     div.appendChild(btnEditar);
     div.appendChild(btnExcluir);
 
@@ -61,8 +61,9 @@ function acao() {
     return li;
  }
 
-     
+
  }
+
  function fechar(){
      let modal= document.querySelector('.modal')
     modal.style.display="none";
