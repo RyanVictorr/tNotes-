@@ -6,15 +6,15 @@ function acao() {
  let btnAddTarefa = document.querySelector('#btnAddTarefa');
  let listaTarefa = document.querySelector('.content');
  
- novaTarefa.addEventListener('keypress', (e)=>{
-    if(e.keycode==13){
-    let tarefa ={
-       nome: novaTarefa.value, 
-       id:gerarId(),
-    }
-       adicionarTarefa(tarefa);
- }});
- 
+ novaTarefa.addEventListener('keypress', (e) => {
+   if (e.keyCode === 13) {
+      let tarefa = {
+         nome: novaTarefa.value,
+         id: gerarId(),
+      };
+      adicionarTarefa(tarefa);
+   }
+});
  
  btnAddTarefa.addEventListener('click',(e)=>{
     let tarefa={
