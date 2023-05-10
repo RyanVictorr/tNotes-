@@ -49,6 +49,10 @@ function acao() {
     btnExcluir.classList.add('btnAcao');
     btnExcluir.innerHTML='<i class="fa fa-trash"></i>';
  
+    btnExcluir.addEventListener('click', () => {
+    li.remove();
+    }); 
+    
     div.appendChild(btnEditar);
     div.appendChild(btnExcluir);
 
