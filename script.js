@@ -2,24 +2,16 @@ function acao() {
    let modal= document.querySelector('.modal')
     modal.style.display="block";
 
-     let novaTarefa = document.querySelector('#novaTarefa');
- let btnAddTarefa = document.querySelector('#btnAddTarefa');
- let listaTarefa = document.querySelector('.content');
+   const novaTarefa = document.querySelector('.novaTarefa');
+   const btnAddTarefa = document.querySelector('.btnAddTarefa');
+   const listaTarefa = document.querySelector('.divright');
 
- novaTarefa.addEventListener('keypress', (e) => {
-   if (e.keyCode === 13) {
-      let tarefa = {
-         nome: novaTarefa.value,
-         id: gerarId(),
-      };
-      adicionarTarefa(tarefa);
-   }
-});
+ 
  
  btnAddTarefa.addEventListener('click',(e)=>{
     let tarefa={
        nome:novaTarefa.value,
-       id:gerarId(),
+       id:gerarId()
     }
     adicionarTarefa(tarefa);
    
@@ -37,22 +29,21 @@ function acao() {
  
  function criarTagLI(tarefa){
     let li=document.createElement('li');
+    li.id=tarefa.id;
     let span = document.createElement('span')
     span.classList.add('textoTarefa');
     span.innerHTML = tarefa.nome;
  
-    let div = document.createElement('div');
+    let div = document.createElement('li');
     let btnEditar = document.createElement('button');
     btnEditar.classList.add('btnAcao');
     btnEditar.innerHTML='<i class="fa fa-pencil"></i>';
+    btnEditar.setAttribute('onclick', 'editar('+tarefa.id+')');
     let btnExcluir = document.createElement('button');
-    btnExcluir.classList.add('btnAcao');
-    btnExcluir.innerHTML='<i class="fa fa-trash"></i>';
+    btnExcluir.classList.add('btnAcao2');
+    btnExcluir.innerHTML= '<i class="fa fa-trash"></i>';
+    btnExcluir.setAttribute('onclick', 'btnExcluir ('+tarefa.id+')');
  
-    btnExcluir.addEventListener('click', () => {
-      li.remove();
-   });   
-
     div.appendChild(btnEditar);
     div.appendChild(btnExcluir);
 
@@ -60,11 +51,22 @@ function acao() {
     li.appendChild(div);
     return li;
  }
-
-
+ function editar(idTarefa){
+   alert(idTarefa);
+ }
+ function excluir(idTarefa){
+   let confirmacao = window.confirm('Tem certeza que deseja excluir?');
+   if(confirmacao){
+      let li = document.querySelector('#'+idTarefa+'');
+      if(li){
+         listaTarefa.removeChild(li);
+      }
+   }
  }
 
+ 
+ }
  function fechar(){
-     let modal= document.querySelector('.modal')
-    modal.style.display="none";
- }
+   let modal= document.querySelector('.modal')
+  modal.style.display="none";
+}
