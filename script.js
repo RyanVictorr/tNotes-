@@ -16,6 +16,12 @@ function acao() {
     adicionarTarefa(tarefa);
    
  });
+   
+ document.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+
+  }
+});
  
  function gerarId(){
     return Math.floor(Math.random()*300);
