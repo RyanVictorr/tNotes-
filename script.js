@@ -24,7 +24,7 @@ function acao() {
 });
  
  function gerarId(){
-    return Math.floor(Math.random()*300);
+    return Math.floor(Math.random()*3000);
  
  }
  function adicionarTarefa(tarefa){
@@ -40,16 +40,21 @@ function acao() {
     span.classList.add('textoTarefa');
     span.innerHTML = tarefa.nome;
  
-    let div = document.createElement('li');
+    let div = document.createElement('div');
     let btnEditar = document.createElement('button');
     btnEditar.classList.add('btnAcao');
     btnEditar.innerHTML='<i class="fa fa-pencil"></i>';
-    btnEditar.setAttribute('onclick', 'editar('+tarefa.id+')');
+    btnEditar.onclick = () => {
+      console.log('editar')
+      btnEditar.parentNode.parentNode.parentElement.editChild(btnEditar.parentNode.parentNode)
+    }
     let btnExcluir = document.createElement('button');
     btnExcluir.classList.add('btnAcao2');
     btnExcluir.innerHTML= '<i class="fa fa-trash"></i>';
-    btnExcluir.setAttribute('onclick', 'btnExcluir ('+tarefa.id+')');
- 
+    btnExcluir.onclick = () => {
+      console.log('removendo')
+      btnExcluir.parentNode.parentNode.parentElement.removeChild(btnExcluir.parentNode.parentNode)
+    }
     div.appendChild(btnEditar);
     div.appendChild(btnExcluir);
 
@@ -60,17 +65,8 @@ function acao() {
  function editar(idTarefa){
    alert(idTarefa);
  }
- function excluir(idTarefa){
-   let confirmacao = window.confirm('Tem certeza que deseja excluir?');
-   if(confirmacao){
-      let li = document.querySelector('#'+idTarefa+'');
-      if(li){
-         listaTarefa.removeChild(li);
-      }
-   }
- }
-
  
+
  }
  function fechar(){
    let modal= document.querySelector('.modal')
