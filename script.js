@@ -1,62 +1,67 @@
 let listaTarefa; // Torna listaTarefa uma variável global
 
+window.addEventListener('DOMContentLoaded', function() {
+  const btnAddTarefa = document.querySelector('.btnAddTarefa');
+  btnAddTarefa.addEventListener('click', function () {
+    adicionarTarefa();
+  });
+});
+
 function acao() {
   let modal = document.querySelector('.modal');
   modal.style.display = "block";
 
   const novaTarefa = document.querySelector('.novaTarefa');
-  const btnAddTarefa = document.querySelector('.btnAddTarefa');
   listaTarefa = document.querySelector('.divright'); // Atribui valor à variável global
-
-  btnAddTarefa.addEventListener('click', (e) => {
-    let tarefa = {
-      nome: novaTarefa.value,
-      id: gerarId()
-    }
-    adicionarTarefa(tarefa);
-  });
+  novaTarefa.value = '';
 
   document.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
-
+      adicionarTarefa();
     }
   });
+}
 
-  function gerarId() {
-    return Math.floor(Math.random() * 3000);
+function adicionarTarefa() {
+  let novaTarefa = document.querySelector('.novaTarefa');
+  let tarefa = {
+    nome: novaTarefa.value,
+    id: gerarId()
   }
+  let li = criarTagLI(tarefa);
 
-  function adicionarTarefa(tarefa) {
-   
-    let li = criarTagLI(tarefa);
-    
-    listaTarefa.appendChild(li);
-    novaTarefa.value = '';
-  }
+  listaTarefa.appendChild(li);
+  novaTarefa.value = '';
+}
 
-  function criarTagLI(tarefa) {
-    let li = document.createElement('li');
-    li.id = tarefa.id;
-    let span = document.createElement('span')
-    span.classList.add('textoTarefa');
-    span.innerHTML = tarefa.nome;
+// Resto do código permanece o mesmo
 
-    let div = document.createElement('div');
-    let btnEditar = document.createElement('button');
-    btnEditar.classList.add('btnAcao');
-    btnEditar.innerHTML = '<i class="fa fa-pencil"></i>';
-    btnEditar.setAttribute('onclick', 'editar(' + tarefa.id + ')');
-    let btnExcluir = document.createElement('button');
-    btnExcluir.classList.add('btnAcao2');
-    btnExcluir.innerHTML = '<i class="fa fa-trash"></i>';
-    btnExcluir.setAttribute('onclick', 'excluir(' + tarefa.id + ')');
-    div.appendChild(btnEditar);
-    div.appendChild(btnExcluir);
+function criarTagLI(tarefa) {
+  let li = document.createElement('li');
+  li.id = tarefa.id;
+  let span = document.createElement('span')
+  span.classList.add('textoTarefa');
+  span.innerHTML = tarefa.nome;
 
-    li.appendChild(span);
-    li.appendChild(div);
-    return li;
-  }
+  let div = document.createElement('div');
+  let btnEditar = document.createElement('button');
+  btnEditar.classList.add('btnAcao');
+  btnEditar.innerHTML = '<i class="fa fa-pencil"></i>';
+  btnEditar.addEventListener('click', function () {
+    editar(tarefa.id);
+  });
+  let btnExcluir = document.createElement('button');
+  btnExcluir.classList.add('btnAcao2');
+  btnExcluir.innerHTML = '<i class="fa fa-trash"></i>';
+  btnExcluir.addEventListener('click', function () {
+    excluir(tarefa.id);
+  });
+  div.appendChild(btnEditar);
+  div.appendChild(btnExcluir);
+
+  li.appendChild(span);
+  li.appendChild(div);
+  return li;
 }
 
 function editar(idTarefa) {
@@ -76,4 +81,8 @@ function excluir(idTarefa) {
 function fechar() {
   let modal = document.querySelector('.modal');
   modal.style.display = "none";
+}
+
+function gerarId() {
+  return Math.floor(Math.random() * 3000);
 }
