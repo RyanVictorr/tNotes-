@@ -16,17 +16,31 @@ function acao() {
   novaTarefa.value = '';
 
   document.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      adicionarTarefa();
-    }
+   
   });
+}
+function obterDataAtual() {
+  let data = new Date();
+  let dia = data.getDate();
+  let mes = data.getMonth() + 1;
+  let ano = data.getFullYear();
+  return `${dia}/${mes}/${ano}`;
+}
+
+function obterHorarioAtual() {
+  let data = new Date();
+  let horas = data.getHours();
+  let minutos = data.getMinutes();
+  return `${horas}:${minutos}`;
 }
 
 function adicionarTarefa() {
   let novaTarefa = document.querySelector('.novaTarefa');
   let tarefa = {
     nome: novaTarefa.value,
-    id: gerarId()
+    id: gerarId(),
+    data: obterDataAtual(),
+    horario: obterHorarioAtual()
   }
   let li = criarTagLI(tarefa);
 
@@ -34,14 +48,14 @@ function adicionarTarefa() {
   novaTarefa.value = '';
 }
 
-// Resto do código permanece o mesmo
 
 function criarTagLI(tarefa) {
   let li = document.createElement('li');
   li.id = tarefa.id;
   let span = document.createElement('span')
   span.classList.add('textoTarefa');
-  span.innerHTML = tarefa.nome;
+span.innerHTML = `<strong>Tarefa:</strong> ${tarefa.nome}<br><strong>Data:</strong> ${tarefa.data}<br><strong>Horário:</strong> ${tarefa.horario}`;
+
 
   let div = document.createElement('div');
   let btnEditar = document.createElement('button');
