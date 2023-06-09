@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" class="left-login-image" href="style.css">
+    <link rel="icon" href="tnotes.ico">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="manifest" href="manifest.json">
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function(registration) {
+          console.log('Service Worker registrado com sucesso:', registration);
+        })
+        .catch(function(error) {
+          console.log('Falha ao registrar o Service Worker:', error);
+        });
+    });
+  }
+</script>
+
+    <title>Home</title>
+    <meta name="Pagina de login" content="Pagina de loginda plataforma tNotes">
+</head>
+<body>
+
+    <header> 
+       
+        <h3>Home</h3>
+        <h3>tNotes</h3>
+          
+ 
+   
+</header>
+<main >
+  
+    <div class="divleft">
+    <div class="boxleft">
+        <button onclick="acao()" class="button"> <a href="#"> + Novo</a></button>
+        <div class="links">
+
+      <button class="tg"><a href="#"> Grupos</a></button>
+      <button class="tg"><a href="tarefas.html"> Tarefas</a></button>
+      
+    </div>
+    
+    <div class="sobre"><a href="sobre.html">Sobre</a></div>
+    </div>
+    
+
+    </div>
+    <div class="divright">
+      <div class="tarefa">
+       <h3>Tarefas</h3>
+      </div>
+
+      <div  class="modal">
+        
+        <div onclick="fechar()" class="fechar"><h2>X</h2></div>
+        <div class="tarefas">
+          <h2>Criar nova tarefa</h2>
+          
+          <input type="text" class="novaTarefa" placeholder="nome da tarefa"> <button class="btnAddTarefa">
+            <i class="fa fa-plus"></i>
+          </button><br>
+         
+          <br>
+        
+          <textarea class="descricaoTarefa" placeholder="Adicione uma descrição"></textarea><br>
+          
+          <input type="date" class="dataFim" placeholder="Data de Fim">
+         
+        </div>
+        
+        <ul id="listaTarefa">
+          
+              
+            </ul>
+        
+    </div>
+    <div class="modal-detalhes">
+      <div class="modal-content">
+        <span onclick="fecharDetalhes()" class="fechar">&times;</span>
+        <h2 class="nomeTarefa"></h2>
+        <p class="descricaoTarefaModal"></p>
+        <p class="dataFimTarefa"></p>
+        <!-- Adicione outros elementos da modal conforme necessário -->
+      </div>
+    </div>
+</div>
+
+</main>
+
+
+</body>
+</html>
