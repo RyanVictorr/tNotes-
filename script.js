@@ -109,7 +109,7 @@ function exibirDetalhes(tarefa) {
 
   nomeTarefaModal.textContent = tarefa.nome;
   descricaoTarefaModal.textContent = tarefa.descricao;
-  dataFimTarefa.textContent = `Data de Fim: ${tarefa.dataFim}`;
+  dataFimTarefa.textContent = `Agendado para: ${tarefa.dataFim}`;
 
   // Exibir a modal de detalhes
   let modalDetalhes = document.querySelector('.modal-detalhes');
