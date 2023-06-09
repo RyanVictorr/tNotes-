@@ -141,14 +141,9 @@ function marcarConcluida(idTarefa, concluida) {
   }
 }
 
-
-
-
-
 function editar(idTarefa) {
   alert(idTarefa);
 }
-
 function excluir(idTarefa) {
   let confirmacao = window.confirm('Tem certeza que deseja excluir?');
   if (confirmacao) {
