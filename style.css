@@ -14,6 +14,9 @@ main{
     display: flex;
     
 }
+.completed .textoTarefa {
+    text-decoration: line-through;
+  }
 header{
     background-color: #00B2FF;
     max-width: 100%;
@@ -26,15 +29,59 @@ header{
    
    
 }
+
 h3{
     justify-content: space-between;
     display: inline;
     margin: 20px;
 }
-
+.tarefa{
+    width: 100%;
+    height: 30px;
+    margin-left: 6%;
+    margin-top: 2%;
+   align-items: center;
+    display: flex;
+}
 .logo{
     margin-left: 10px;
 }
+.modal-detalhes {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.fechar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fechar:hover,
+.fechar:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .tg{
     width: 100%;
     height: 8vh; 
@@ -53,7 +100,7 @@ h3{
     background-color: #ebebeb;
 }
 .boxleft{
-    width: 85%;
+    
     text-align: center;
     height: 93vh;
     background: #ffffff;
@@ -63,13 +110,14 @@ h3{
     border-width: 1px;
 }
 .divleft{
-    width: 20%;
+    width: 18%;
 }
 .divright{
     width: 100%;
     height: 93vh;
     list-style: none;
-    display: flex;
+    display: block;
+    
   
 }
 
@@ -82,6 +130,7 @@ a{
     text-decoration: none;
     color: #000000;
 }
+
 
 .button{
     width: 70%;
@@ -114,9 +163,9 @@ a{
 .modal{
     width: 35%;
     height: 60vh;
-    margin-right: 30%;
-    margin-top: 50px;
     display: none;
+    margin-top: 50px;
+    margin-left: 20%;
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0px 10px 40px #a3a3a3;
@@ -183,39 +232,43 @@ a{
     
     
 }
+  
 
-.textoTarefa{
-    margin: 15px;
-    max-width: 50%;
-}
-li{
-    margin-right: 20px;
-    width: 20%;
-   height: 50px;
-    margin-top: 50px;
-    border-radius: 10px;
-    box-shadow: 0px 10px 40px #a3a3a3;
+
+  
+  li {
+   
+    width: 75%;
+    margin-top: 10px;
+    height: 50px;
+   margin-right:auto;
+   margin-left: auto;
+    border-radius: 0px;
+    border-width: 0.5px;
+    border-color: #c5c5c5;
+    outline: none;
+    
+    border-style: double;
+    
     justify-content: space-between;
     display: flex;
     align-items: center;
     background-color: white;
-   
 
+  }
+  .descricaoTarefa{
+    height: 60px;
+    width: 40%;
+  }
+ 
   
-}
-li li{
-  
-    max-width: 50%;
-
-  margin-top:0px ;
+  li li {
+    
+    width: fit-content;
+    
     box-shadow: none;
-    
-   
-   
-   
-    
-
-}
+  }
+  
 .btnAcao{
     border-radius: 20px;
     border: 1px solid ;
