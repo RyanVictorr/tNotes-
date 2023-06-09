@@ -112,13 +112,12 @@ h3{
 .divleft{
     width: 18%;
 }
+
 .divright{
     width: 100%;
     height: 93vh;
     list-style: none;
     display: block;
-    
-  
 }
 
 .links{
@@ -131,7 +130,15 @@ a{
     color: #000000;
 }
 
-
+.user{
+    border: none;
+    background-color: white;
+    
+}
+.tasks{
+    border: none;
+    background-color: white;
+}
 .button{
     width: 70%;
     height: 8vh;
@@ -227,15 +234,7 @@ a{
     list-style-type: none;
     padding: 0;
     margin: 0;
-    
-    
-    
-    
 }
-  
-
-
-  
   li {
    
     width: 75%;
@@ -276,7 +275,7 @@ a{
     width: 25px;
     height: 25px;
     color: white;
-
+    cursor: pointer;
 }
 .btnAcao2{
     border-radius: 20px;
@@ -285,7 +284,7 @@ a{
     width: 25px;
     height: 25px;
     color: white;
-
+    cursor: pointer;
 }
 .b{
     margin-left: 60px;
