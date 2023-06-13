@@ -43,25 +43,49 @@
           
           <input type="text" class="novaTarefa" placeholder="nome da tarefa"> <button class="btnAddTarefa">
             <i class="fa fa-plus"></i>
-          </button><br>        
+          </button><br>
+         
           <br>
+        
+   
             <textarea class="descricaoTarefa" placeholder="Adicione uma descrição"></textarea><br>
             <input type="date" class="dataFim" placeholder="Data de Fim"style="margin-top: 25px;">
       
-        </div>        
-        <ul id="listaTarefa">           
-            </ul>      
+        </div>
+        
+        <ul id="listaTarefa">
+          
+              
+            </ul>
+           
+        
     </div>
     <div class="modal-detalhes">
-      <div class="modal-content">
+      <div class="modal-content1">
         <span onclick="fecharDetalhes()" class="fechar">&times;</span>
         <h2 class="nomeTarefa"></h2>
         <p class="descricaoTarefaModal"></p>
         <p class="dataFimTarefa"></p>
+        
       </div>
     </div>
+    <div class="modal-editar">
+      <div class="modal-content">
+        <span class="fechar" onclick="fecharEditar()">&times;</span>
+        <label for="editar-nome">Nome:</label>
+        <input type="text" id="editar-nome">
+        <label for="editar-descricao">Descrição:</label>
+        <input type="text" id="editar-descricao">
+        <label for="editar-data-fim">Data Fim:</label>
+        <input type="date" id="editar-data-fim">
+        <!-- Adicione os campos adicionais de edição da tarefa aqui -->
+        <button onclick="salvarEdicao()">Salvar</button>
+      </div>
+    </div>
+</div>
 </div>
 </main>
 </body>
 </html>
+
 
