@@ -636,10 +636,37 @@ a{
     }
 }
 @media(min-width:481px) and (max-width:768px){
+    .gender-inputs * label{
+        font-size: 12px;
+        margin: 2px;
+    }
+
+    .textCad * h4{
+        font-size: 12px;
+        margin: 2px;
+
+    }
 .main-login{
         flex-direction: column;
     }
 
+    .input-group{
+        width: 50vw;
+        height: 50vh;
+        overflow-y: scroll;
+        justify-content: center;
+    }
+    .form-header{
+        justify-content: center;
+    }
+    form-image{
+        width: 50vw;
+        height: 50vh;
+    }
+    .imagecad{
+        width: 20px;
+        height: 40%;
+    }
 
     .left-login{
         width: 100%;
@@ -701,7 +728,8 @@ a{
 
     /*Página de cadastro*/
     .imagecad{
-        width: 80vw; 
+        width: 80vw;
+        height: 80%;
     }
     
     .container{
@@ -717,6 +745,15 @@ a{
     }
     .input-group * label{
         font-size: 18px;
+    }
+    .input-group{
+        width: 50vw;
+        height: 50vh;
+        overflow-y: scroll;
+        justify-content: center;
+    }
+    .form-header{
+        justify-content: center;
     }
 }
 
