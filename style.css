@@ -602,6 +602,10 @@ a{
     color: #fff;
 }
 
+.gender-inputs{
+    display: none;
+}
+
 @media(min-width:0px) and (max-width: 480px){
     .container{
         width: 100%;
