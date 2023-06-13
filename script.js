@@ -61,7 +61,6 @@ function obterDataAtual() {
 }
 
 
-
 function adicionarTarefa() {
   let novaTarefa = document.querySelector('.novaTarefa');
   let descricaoTarefa = document.querySelector('.descricaoTarefa');
@@ -96,10 +95,7 @@ function criarTagLI(tarefa) {
   span.innerHTML = `
     <strong style="margin-left: 40px;">${tarefa.nome}</strong> 
   `;
-  if (tarefa.concluida) {
-    li.classList.add('completed');
-    checkbox.checked = true;
-  }
+  
 
   let div = document.createElement('div');
   let btnDetalhes = document.createElement('button');
@@ -152,6 +148,7 @@ function exibirDetalhes(tarefa) {
   });
   
 }
+
 function fecharDetalhes() {
   const modalDetalhes = document.querySelector('.modal-detalhes');
   modalDetalhes.style.display = 'none';
@@ -163,19 +160,72 @@ document.addEventListener('click', function (event) {
     fecharDetalhes();
   }
 });
-function marcarConcluida(idTarefa, concluida) {
-  let li = document.getElementById('' + idTarefa + '');
-  if (li) {
-    if (concluida) {
-      li.classList.add('completed');
-    } else {
-      li.classList.remove('completed');
-    }
+
+function editar(idTarefa) {
+  let tarefa = obterTarefaPorId(idTarefa);
+  if (tarefa) {
+    let modalEditar = document.querySelector('.modal-editar');
+    modalEditar.setAttribute('data-id', idTarefa);
+    modalEditar.style.display = "block";
+    let nomeEditar = document.getElementById('editar-nome');
+    let descricaoEditar = document.getElementById('editar-descricao');
+    let dataFimEditar = document.getElementById('editar-data-fim');
+
+    nomeEditar.value = tarefa.nome;
+    descricaoEditar.value = tarefa.descricao; // Preenche o campo de descrição com o valor da tarefa
+    dataFimEditar.value = tarefa.dataFim;
+  }
+}
+function salvarEdicao() {
+  let idTarefaEditar = document.querySelector('.modal-editar').getAttribute('data-id');
+  let nomeEditar = document.getElementById('editar-nome').value;
+  let descricaoEditar = document.getElementById('editar-descricao').value;
+  let dataFimEditar = document.getElementById('editar-data-fim').value; // Obtém o novo valor da data fim
+
+  atualizarTarefa(idTarefaEditar, nomeEditar, descricaoEditar, dataFimEditar);
+
+  let modalEditar = document.querySelector('.modal-editar');
+  modalEditar.style.display = "none";
+}
+
+
+function atualizarTarefa(idTarefa, novoNome, novaDescricao, novaDataFim) {
+  let tarefa = obterTarefaPorId(idTarefa);
+  if (tarefa) {
+    tarefa.nome = novoNome;
+    tarefa.descricao = novaDescricao;
+    tarefa.dataFim = novaDataFim; // Atualiza o valor da data fim da tarefa
+
+    let span = document.getElementById(idTarefa).querySelector('span strong');
+    span.textContent = novoNome;
+
+    let descricaoTarefaModal = document.querySelector('.descricaoTarefaModal');
+    descricaoTarefaModal.textContent = novaDescricao;
+
+    let dataFimTarefa = document.querySelector('.dataFimTarefa');
+    dataFimTarefa.textContent = `Agendado para: ${novaDataFim}`; // Atualiza a data fim na modal de detalhes
   }
 }
 
-function editar(idTarefa) {
-  alert(idTarefa);
+
+function fecharEditar() {
+  let modalEditar = document.querySelector('.modal-editar');
+  modalEditar.style.display = "none";
+}
+function obterTarefaPorId(idTarefa) {
+  let tarefas = Array.from(listaTarefa.children);
+  let tarefaEncontrada = tarefas.find(function (tarefa) {
+    return tarefa.id === idTarefa.toString();
+  });
+  if (tarefaEncontrada) {
+    return {
+      id: tarefaEncontrada.id,
+      nome: tarefaEncontrada.querySelector('strong').textContent,
+      // Obtenha os outros valores da tarefa aqui
+      // ...
+    };
+  }
+  return null;
 }
 function excluir(idTarefa) {
   let confirmacao = window.confirm('Tem certeza que deseja excluir?');
