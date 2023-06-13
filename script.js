@@ -11,9 +11,8 @@ function carregarTarefas() {
 
   // Dados de exemplo - Substitua pelos dados reais das tarefas
   const tarefas = [
-    { nome: 'qa', dataFim: '30/06/2023' },
-    { nome: 'Tarefa 2', dataFim: '15/07/2023' },
-    { nome: 'Tarefa 3', dataFim: '10/08/2023' }
+    { nome: 'Implementar Firebase', dataFim: '30/06/2023' },
+    { nome: 'Pagar a conta de luz', dataFim: '10/08/2023' }
     // Adicione mais tarefas, se necessário
   ];
 
