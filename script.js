@@ -51,7 +51,28 @@ function acao() {
   });
 }
 
+function pesquisarTarefas() {
+  const keywordInput = document.getElementById('keyword-search');
+  const keyword = keywordInput.value.toLowerCase();
 
+  // Obtenha a lista de tarefas
+  const listaTarefa = document.getElementById('listaTarefa');
+
+  // Percorra todas as tarefas e verifique se a palavra-chave está presente
+  const tarefas = Array.from(listaTarefa.children);
+  tarefas.forEach(function (tarefa) {
+    const nomeTarefa = tarefa.querySelector('strong').textContent.toLowerCase();
+    const descricaoTarefa = tarefa.querySelector('.descricaoTarefa').textContent.toLowerCase();
+
+    if (nomeTarefa.includes(keyword) || descricaoTarefa.includes(keyword)) {
+      // Exiba a tarefa se a palavra-chave for encontrada
+      tarefa.style.display = 'block';
+    } else {
+      // Oculte a tarefa se a palavra-chave não for encontrada
+      tarefa.style.display = 'none';
+    }
+  });
+}
 function obterDataAtual() {
   let data = new Date();
   let dia = data.getDate();
