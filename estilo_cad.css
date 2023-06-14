@@ -26,7 +26,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffffc9;
+    background-color: #ffffff;
     padding: 1rem;
 }
 .form-image img{
@@ -100,7 +100,7 @@ body{
     padding: 0.8rem 1rem;
     border: none;
     border-radius: 10px;
-    box-shadow: 1px 1px 6px #0011fadc;
+    box-shadow: 1px 1px 1px #88fff9;
 }
 
 .input-box input:focus-visible{
