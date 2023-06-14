@@ -7,16 +7,59 @@
     font-family: 'Noto sans', sans-serif;
 }
 
-main{
-    display: flex;
-}
+
+
 body{
     overflow-x: hidden;
+   
+}
+.geral{
+    display: flex;
+    margin-top: 3%;
 }
 .completed .textoTarefa {
     text-decoration: line-through;
   }
+  .search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .keyword-search {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 200px;
+    height: 30px; /* Ajuste a largura conforme necessário */
+  }
+  
+  .keyword-search:focus {
+    outline: none;
+    border-color: #5b9dd9;
+    box-shadow: 0 0 5px #5b9dd9;
+  }
+  .fa-search{
+  color: #00B2FF;
+  }
+  .btnAcao3{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid ;
+    background: white;
+
+    color: white;
+    cursor: pointer;
+  }
+
 header{
+    position: fixed;
+    top: 0;
     background-color: #00B2FF;
     width: 100%;
     height: 43px;
@@ -768,5 +811,5 @@ a{
     .textCad * h4{
         font-size: 24px;
     }
-    .textCad > 
+    .textCad > {}
 }
