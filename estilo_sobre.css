@@ -20,6 +20,7 @@ h3{
 }
 
 .container .content {
+  
   flex: 1;
   padding-right: 20px;
 }
@@ -55,6 +56,7 @@ h3{
 
 .geral .membros,
 .geral .contato {
+  cursor: pointer;
   flex-basis: 45%;
   padding: 20px;
   background-color: #ffffff;
@@ -66,6 +68,27 @@ h3{
   font-size: 20px;
   margin-bottom: 10px;
 }
+.geral .membros ul {
+  list-style-type: none; /* Remove os pontos */
+  padding-left: 0; /* Remove o espaçamento padrão à esquerda */
+}
+.geral .membros ul li {
+  margin-bottom: 10px; /* Adiciona espaçamento entre os membros */
+  position: relative; /* Permite posicionar os elementos filhos */
+
+  padding: 5px 10px; /* Adiciona espaçamento interno */
+  margin-right: 10px; /* Adiciona espaçamento entre os membros */
+  background-color: #ffffff; /* Cor de fundo padrão */
+
+}
+
+.geral .membros ul li:hover {
+
+  animation-fill-mode: forwards;
+  margin-left: 10px; /* Move o nome para a direita */
+    background-color: #b1e6fd7c; /* Cor de fundo ao passar o cursor */
+}
+
 
 .geral ul {
   list-style-type: disc;
@@ -87,6 +110,15 @@ header {
   justify-content: space-between;
   display: flex;
  
+}
+
+@keyframes highlight {
+  0% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #bce0fd;
+  }
 }
 
 @media screen and (max-width: 768px) {
