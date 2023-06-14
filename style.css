@@ -172,6 +172,9 @@ h3{
     
 }
 .boxleft{
+    width: 14%;
+    position: fixed;
+    top: 6.8%;
     text-align: center;
     background: #ffffff;
     border-color: #dbdbdb;
