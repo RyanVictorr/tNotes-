@@ -15,16 +15,21 @@
     
     <header>      
         <h3>Home</h3>
-        <h3>tNotes</h3>              
+         
+        <div class="search-container">
+          <input type="text" class="keyword-search" placeholder="Pesquisar">
+          <button class= "btnAcao3"onclick="pesquisarTarefas()"><i class="fa fa-search"></i></button>
+        </div>      
+        <h3>tNotes</h3>      
 </header>
 <main >
-  
+  <div class="geral">
     <div class="divleft">
     <div class="boxleft">
         <button onclick="acao()" class="button"> <a href="#"> + Novo</a></button>        
         <div class="links">
-          <button class="user"><a href="perfil.html"><i class="fa fa-user fa-3x" title="Usuário"></i></a></button><br><br>      
-          <button class="tasks"><a href="tarefas.html"><i class="fa fa-tasks fa-3x" title="Tarefas"></i></a></button>     
+          <button class="user"><a href="perfil.html"><i class="fa fa-user fa-3x" title="Usuário"></i></a>Perfil</button><br><br>      
+          <button class="tasks"><a href="tarefas.html"><i class="fa fa-tasks fa-3x" title="Tarefas"></i></a>Tarefas</button>     
     </div>
     
     <div class="sobre"><a href="sobre.html">Sobre</a></div>
@@ -84,8 +89,7 @@
     </div>
 </div>
 </div>
+</div>
 </main>
 </body>
 </html>
-
-
