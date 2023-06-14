@@ -20,6 +20,28 @@ body{
 .completed .textoTarefa {
     text-decoration: line-through;
   }
+  .concluida {
+    text-decoration: line-through;
+    color: gray;
+  }
+  .checkbox-tarefa {
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  .checkbox-tarefa:checked::before {
+    
+    font-size: 14px;
+    color: white;
+    line-height: 18px;
+  }
   .search-container{
     display: flex;
     justify-content: center;
