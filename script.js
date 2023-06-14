@@ -116,6 +116,13 @@ function criarTagLI(tarefa) {
   span.innerHTML = `
     <strong style="margin-left: 40px;">${tarefa.nome}</strong> 
   `;
+  let checkbox = document.createElement('input');
+   checkbox.className = 'checkbox-tarefa'; 
+checkbox.type = 'checkbox';
+checkbox.addEventListener('change', function() {
+  marcarConcluida(tarefa.id, this.checked);
+});
+li.appendChild(checkbox);
   
 
   let div = document.createElement('div');
@@ -150,6 +157,18 @@ function criarTagLI(tarefa) {
 
   return li;
 }
+function marcarConcluida(idTarefa, concluida) {
+  let tarefa = obterTarefaPorId(idTarefa);
+  if (tarefa) {
+    tarefa.concluida = concluida;
+    if (concluida) {
+      document.getElementById(idTarefa).classList.add('concluida');
+    } else {
+      document.getElementById(idTarefa).classList.remove('concluida');
+    }
+  }
+}
+
 
 function exibirDetalhes(tarefa) {
   // Atualize os elementos da modal de detalhes com os detalhes da tarefa
