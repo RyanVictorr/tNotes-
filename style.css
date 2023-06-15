@@ -936,6 +936,12 @@ a{
     }
   
     }
+@media (max-height: 700px) {
+    .sobre{
+        margin-top: 55vh;
+    }
+
+}
 @media(min-width: 769px) and (max-width: 1279px){
     .card-login{
         width: 85%;
