@@ -936,9 +936,9 @@ a{
     }
   
     }
-@media (max-height: 700px) {
+@media (max-height: 600px) {
     .sobre{
-        margin-top: 55vh;
+        margin-top: 50vh;
     }
 
 }
