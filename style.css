@@ -68,6 +68,7 @@ body{
     line-height: 18px;
   }
   .search-container{
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,10 +153,26 @@ h3{
 .modal-content1 {
   background-color: white;
   margin: 15% auto;
-  padding: 20px;
+  height: 140px;
   border: 1px solid #888;
   width: 60%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.del{
+    margin-top: 0px;
+    height: 42px;
+    margin-left: 10px;
+    font-size: 25px;
+}
+.nomeTarefa{
+    margin-left: 15px;
+    font-size: 20px;
+}
+.descricaoTarefaModal{
+    margin-left: 15px;
+}
+.dataFimTarefa{
+    margin-left: 15px;
 }
 .modal-editar {
     display: none;
@@ -227,7 +244,10 @@ h3{
     border-color: #dbdbdb;
     box-shadow: 0px 10px 40px #a3a3a3;
     
+    
 }
+
+
 
 .divright{
     width: 100%;
@@ -899,13 +919,24 @@ a{
         width: 80%;
   }
 }
-@media(min-width: 769px) and (max-width: 1279px){
+@media(min-width: 480px)and (max-width:1800px){
     .divleft{
-        width: 50%;
+        width: 16%;
         text-align: center;
     }
-
-   
+}
+    @media(max-width: 500px){
+    .divleft{
+        width: 100%;
+        text-align: center;
+    }
+    .modal{
+        margin-left: 0;
+        width: 100%;
+    }
+  
+    }
+@media(min-width: 769px) and (max-width: 1279px){
     .card-login{
         width: 85%;
     } 
