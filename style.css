@@ -1027,3 +1027,25 @@ a{
     }
     .textCad > {}
 }
+@media (max-width: 480px) {
+  header {
+    flex-direction: initial;
+  }
+  .tnotes{
+    display: none;
+  }
+  .menu {
+    margin-bottom: 10px;
+    
+  }
+
+  .keyword-search {
+    width: 100%;
+  }
+  
+}
+@media (max-width: 1768px) {
+    .menu{
+        width: 50px;
+    }
+}
