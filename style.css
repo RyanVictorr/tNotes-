@@ -332,8 +332,8 @@ a{
     width: 75%;
     margin-top: 10px;
     height: 50px;
-   margin-right:auto;
-   margin-left: auto;
+    margin-right:auto;
+    margin-left: auto;
     border-radius: 0px;
     border-width: 0.5px;
     border-color: #c5c5c5;
@@ -522,15 +522,34 @@ a{
 a{
     color: white;
 }
+
+/*Página de cadastro*/
+
 .container{
-    width: 90%;
-    height: 95%;
+    width: 100%;
+    height: 100vh;
     display: flex;
-    position: absolute;
+    align-items: center;
+    align-content: center;
     box-shadow: 5px 5x 10px rgba(0, 0, 0, .212);
 }
+
+.divRigCad{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divLefCad{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .form-image{
-    width: 50%;
+    width: 50vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -542,13 +561,12 @@ a{
 }
 
 .form{
-    width: 50%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     background-color: rgba(207, 207, 207, 0.507);
-    padding: 3rem;
+    padding: 2vw;
 
 }
 .form-header{
@@ -675,35 +693,119 @@ a{
 }
 
 @media(min-width:0px) and (max-width: 480px){
+
+    /*Página cadastro*/
+
     .container{
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
+        width: 100vw;
+        height: 100vh;
         flex-direction: column;
         display: flex;
+    }
 
+    .divLefCad{
+        width: 100%;
+        height: auto;
     }
-    .gender-inputs{
-        display: none;
+
+    .form-image{
+        width: 100vw;
     }
+
+    .form-image img{
+        width: 400px;
+        height: 327px;
+        margin: 0%;
+        padding: 10%;
+    }
+
+
+    .divRigCad{
+        width: 100vw;
+        height: auto;
+    }
+    
+   
     .form{
         width: 100%;
+        height: auto;
         font-size: 10px;
         background-color: white;
+        
     }
-    .form-image{
-        width: 50%;
-        height: 50%;
-        display: none;
+    .form > form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input-group{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
     .textCad{
         width: 50%;
         height: 50%;
-        
     }
+    
 }
 @media(min-width:481px) and (max-width:768px){
+    /*Página cadastro*/
+    .container{
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .divLefCad{
+        width: 100%;
+        height: auto;
+    }
+
+    .form-image{
+        width: 100vw;
+    }
+
+    .form-image img{
+        width: 400px;
+        height: 327px;
+        margin: 0%;
+        padding: 10%;
+    }
+
+
+    .divRigCad{
+        width: 100vw;
+        height: auto;
+    }
+    
+
+    .form{
+        width: 100%;
+        height: auto;
+        font-size: 10px;
+        background-color: white;
+        padding: 0%;
+        
+    }
+    .form > form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input-group{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input-box{
+        margin-bottom: 0%;
+    }
     .gender-inputs * label{
         font-size: 12px;
         margin: 2px;
@@ -714,7 +816,8 @@ a{
         margin: 2px;
 
     }
-.main-login{
+
+    .main-login{
         flex-direction: column;
     }
 
@@ -726,6 +829,7 @@ a{
     }
     .form-header{
         justify-content: center;
+
     }
     form-image{
         width: 50vw;
@@ -758,17 +862,17 @@ a{
         width: 80%;
   }
 }
-
 @media(min-width: 769px) and (max-width: 1279px){
     .divleft{
         width: 50%;
         text-align: center;
     }
 
-    /*Página de login
+   
     .card-login{
         width: 85%;
-    }
+    } 
+    /*
     .container{
         width: 50%;
         height: auto;
@@ -816,12 +920,29 @@ a{
     }
     .input-group{
         width: 50vw;
-        height: 50vh;
+        height: auto;
+        flex-wrap: nowrap;
         overflow-y: scroll;
         justify-content: center;
+        flex-direction: column;
+    }
+    .input-box{
+        align-items: center;
     }
     .form-header{
         justify-content: center;
+    }
+    .input-box{
+        padding: 5px;
+    }
+    .form{
+        padding: 20px;
+    }
+    .buttonCad{
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -836,5 +957,10 @@ a{
     .textCad * h4{
         font-size: 24px;
     }
-    .textCad > {}
+    .form{
+        padding: 1vw;
+    }
+    .input-box{
+        padding: 2px;
+    }
 }
