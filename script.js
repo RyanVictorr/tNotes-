@@ -4,7 +4,22 @@ let listaTarefa; // Torna listaTarefa uma variável global
 
 window.addEventListener('DOMContentLoaded', function() {
   carregarTarefas();
+ 
 });
+window.addEventListener('DOMContentLoaded', function() {
+  
+  document.getElementById("menu-icon").addEventListener("click", toggleMenu);
+});
+function toggleMenu() {
+  var divleft = document.querySelector(".divleft");
+  divleft.style.display = divleft.style.display === "none" ? "block" : "none";
+}
+
+// Adicionar evento de clique ao ícone do menu
+
+
+// Adicionar evento de clique ao ícone do menu
+
 
 function carregarTarefas() {
   const tasksList = document.querySelector('.tasks-list');
@@ -30,6 +45,7 @@ function carregarTarefas() {
       </div>
     `;
     tasksList.appendChild(li);
+    
   });
 }
 
@@ -37,18 +53,23 @@ window.addEventListener('DOMContentLoaded', function() {
   const btnAddTarefa = document.querySelector('.btnAddTarefa');
   btnAddTarefa.addEventListener('click', function () {
     adicionarTarefa();
+     
   });
+
 });
+
 function acao() {
   let modal = document.querySelector('.modal');
   modal.style.display = "block";
+
   const novaTarefa = document.querySelector('.novaTarefa');
   listaTarefa = document.querySelector('.divright'); // Atribui valor à variável global
   novaTarefa.value = '';
-
+  
   document.addEventListener('keypress', function (e) {
    
   });
+   
 }
 
 function pesquisarTarefas() {
