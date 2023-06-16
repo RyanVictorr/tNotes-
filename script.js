@@ -2,53 +2,56 @@ let listaTarefa; // Torna listaTarefa uma variável global
 
 // JavaScript (script.js)
 
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
   carregarTarefas();
- 
-});
-window.addEventListener('DOMContentLoaded', function() {
-  
   document.getElementById("menu-icon").addEventListener("click", toggleMenu);
 });
+
+let menuAberto = false; // Variável para rastrear o estado do menu
+
 function toggleMenu() {
-  var divleft = document.querySelector(".divleft");
-  divleft.style.display = divleft.style.display === "none" ? "block" : "none";
+  const divleft = document.querySelector(".divleft");
+  
+  // Verificar se o menu está aberto ou fechado
+  if (menuAberto) {
+    divleft.style.display = "none"; // Fechar o menu
+  } else {
+    divleft.style.display = "block"; // Abrir o menu
+  }
+  
+  // Atualizar o estado do menu
+  menuAberto = !menuAberto;
 }
-
-// Adicionar evento de clique ao ícone do menu
-
-
-// Adicionar evento de clique ao ícone do menu
 
 
 function carregarTarefas() {
   const tasksList = document.querySelector('.tasks-list');
 
-  // Dados de exemplo - Substitua pelos dados reais das tarefas
-  const tarefas = [
-    { nome: 'Implementar Firebase', dataFim: '30/06/2023' },
-    { nome: 'Pagar a conta de luz', dataFim: '10/08/2023' }
-    // Adicione mais tarefas, se necessário
-  ];
+  if (tasksList) {
+    // Dados de exemplo - Substitua pelos dados reais das tarefas
+    const tarefas = [
+      { nome: 'Implementar Firebase', dataFim: '30/06/2023' },
+      { nome: 'Pagar a conta de luz', dataFim: '10/08/2023' }
+      // Adicione mais tarefas, se necessário
+    ];
 
-  // Limpa a lista de tarefas
-  tasksList.innerHTML = '';
+    // Limpa a lista de tarefas
+    tasksList.innerHTML = '';
 
-  // Adiciona as tarefas à lista
-  tarefas.forEach(function(tarefa) {
-    const li = document.createElement('li');
-    li.className = 'task-item';
-    li.innerHTML = `
-      <div class="task-content">
-        <span class="task-name">${tarefa.nome}</span>
-        <span class="task-deadline">Prazo: ${tarefa.dataFim}</span>
-      </div>
-    `;
-    tasksList.appendChild(li);
-    
-  });
+    // Adiciona as tarefas à lista
+    tarefas.forEach(function(tarefa) {
+      const li = document.createElement('li');
+      li.className = 'task-item';
+      li.innerHTML = `
+        <div class="task-content">
+          <span class="task-name">${tarefa.nome}</span>
+          <span class="task-deadline">Prazo: ${tarefa.dataFim}</span>
+        </div>
+      `;
+      tasksList.appendChild(li);
+    });
+  }
 }
-
 window.addEventListener('DOMContentLoaded', function() {
   const btnAddTarefa = document.querySelector('.btnAddTarefa');
   btnAddTarefa.addEventListener('click', function () {
