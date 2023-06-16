@@ -199,8 +199,16 @@ function exibirDetalhes(tarefa) {
 
   nomeTarefaModal.textContent = tarefa.nome;
   descricaoTarefaModal.textContent = tarefa.descricao;
-  dataFimTarefa.textContent = `Agendado para: ${tarefa.dataFim}`;
-
+  const dataFim = new Date(tarefa.dataFim);
+  
+  // Verifica se a conversão foi bem-sucedida
+  if (!isNaN(dataFim.getTime())) {
+    // Formata a data no formato desejado
+    const dataFormatada = dataFim.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    dataFimTarefa.textContent = `Agendado para: ${dataFormatada}`;
+  } else {
+    dataFimTarefa.textContent = 'Data inválida';
+  }
   // Exibir a modal de detalhes
   let modalDetalhes = document.querySelector('.modal-detalhes');
   modalDetalhes.style.display = 'block';
