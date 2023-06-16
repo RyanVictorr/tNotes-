@@ -689,63 +689,84 @@ a{
 .gender-inputs{
     display: none;
 }
-@media(min-width:0px) and (max-width: 480px){
-    /*Página de login*/
-    .main-login{
-        flex-direction: column;
-    }
-    .left-login{
-        width: 100vw;
-        height: auto;
-    }
-    .right-login{
-        width: 100vw;
-        height: auto;
-    }
-    .card-login{
-        width: 80vw;
-        padding: 30px;
-    }
-    /*Página cadastro*/
 
-    .container{
+@media(min-width: 480px)and (max-width:1800px){
+    /*.divleft{
+        width: 16%;
+        text-align: center;
+    }
+}
+    @media(max-width: 500px){
+    .divleft{
         width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
+    }
+    .modal{
+        margin-left: 0;
+        width: 100%;
+    }
+  
+    }
+    /*Página de login*/
+    .card-login{
+        width: 85%;
+    }
+    /*.container{
+        width: 50%;
+        height: auto;
+    }
+    .input-group{
         flex-direction: column;
-        display: flex;
-
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+        font-size: 12px;
     }
     .gender-inputs{
-        display: none;
+        margin-top: 2rem;
+        font-size: 12px;
     }
-    .form{
-        width: 100%;
-        font-size: 10px;
-        background-color: white;
+    .gender-group{
+        flex-direction: column;
+        font-size: 12px;
     }
-    .form-image{
-        width: 50%;
-        height: 50%;
-        display: none;
+    .gender-input{
+        margin-top: 0.5rem;
+        font-size: 12px;
     }
-    .textCad{
-        width: 50%;
-        height: 50%;
-    }
+
+    /*Página de cadastro*/
     
+@media (max-width: 480px) {
+  header {
+    flex-direction: initial;
+  }
+  .tnotes{
+    display: none;
+  }
+  .menu {
+    margin-bottom: 10px;
+    
+  }
+
+  .keyword-search {
+    width: 100%;
+  }
+  
 }
-
-@media(min-width:481px) and (max-width:768px){
-    /*Página de login*/
-
-    
-    .left-login{
-        width: 50vw;
-        height: auto;
-
+@media (max-width: 1768px) {
+    .menu{
+        width: 50px;
     }
+}
+@media (max-height: 600px) {
+    .sobre{
+        margin-top: 50vh;
+    }
+
+}
+@media(min-width:481px) and (max-width:768px){
     /*Página cadastro*/
     .container{
         width: 100vw;
@@ -856,162 +877,7 @@ a{
         width: 80%;
   }
 }
-@media(min-width:481px) and (max-width:768px){
-    /*Página cadastro*/
-    .container{
-        width: 100vw;
-        height: 100vh;
-        flex-direction: column;
-        display: flex;
-    }
-
-    .divLefCad{
-        width: 100%;
-        height: auto;
-    }
-
-    .form-image{
-        width: 100vw;
-    }
-
-    .form-image img{
-        width: 400px;
-        height: 327px;
-        margin: 0%;
-        padding: 10%;
-    }
-
-
-    .divRigCad{
-        width: 100vw;
-        height: auto;
-    }
-    
-
-    .form{
-        width: 100%;
-        height: auto;
-        font-size: 10px;
-        background-color: white;
-        padding: 0%;
-        
-    }
-    .form > form{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .input-group{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .input-box{
-        margin-bottom: 0%;
-    }
-    .gender-inputs * label{
-        font-size: 12px;
-        margin: 2px;
-    }
-
-    .textCad * h4{
-        font-size: 12px;
-        margin: 2px;
-
-    }
-.main-login{
-        flex-direction: column;
-    }
-
-    .input-group{
-        width: 50vw;
-        height: 50vh;
-        overflow-y: scroll;
-        justify-content: center;
-    }
-    .form-header{
-        justify-content: center;
-    }
-    form-image{
-        width: 50vw;
-        height: 50vh;
-    }
-    .imagecad{
-        width: 20px;
-        height: 40%;
-    }
-
-    .left-login{
-        width: 100%;
-        height: auto;
-    }
-
-    .right-login{
-        width: 100%;
-        height: auto;
-    }
-
-    .left-login-image{
-        width: 50vw;
-    }
-    
-    .card-login{
-        width: 90%;
-    }
-    /*Página principal*/
-    
-}
-
-@media(min-width: 480px)and (max-width:1800px){
-    /*.divleft{
-        width: 16%;
-        text-align: center;
-    }
-}
-    @media(max-width: 500px){
-    .divleft{
-        width: 100%;
-        text-align: center;
-    }
-    .modal{
-        margin-left: 0;
-        width: 100%;
-    }
-  
-    }
-    /*Página de login*/
-    .card-login{
-        width: 85%;
-    }
-    /*.container{
-        width: 50%;
-        height: auto;
-    }
-    .input-group{
-        flex-direction: column;
-        overflow-y: scroll;
-        flex-wrap: nowrap;
-        max-height: 10rem;
-        padding-right: 5rem;
-        font-size: 12px;
-    }
-    .gender-inputs{
-        margin-top: 2rem;
-        font-size: 12px;
-    }
-    .gender-group{
-        flex-direction: column;
-        font-size: 12px;
-    }
-    .gender-input{
-        margin-top: 0.5rem;
-        font-size: 12px;
-    }
-
-    /*Página de cadastro*/
-    @media(min-width: 769px) and (max-width: 1279px){
+@media(min-width: 769px) and (max-width: 1279px){
     .divleft{
         width: 50%;
         text-align: center;
@@ -1112,32 +978,4 @@ a{
     .input-box{
         padding: 2px;
     }
-}
-@media (max-width: 480px) {
-  header {
-    flex-direction: initial;
-  }
-  .tnotes{
-    display: none;
-  }
-  .menu {
-    margin-bottom: 10px;
-    
-  }
-
-  .keyword-search {
-    width: 100%;
-  }
-  
-}
-@media (max-width: 1768px) {
-    .menu{
-        width: 50px;
-    }
-}
-@media (max-height: 600px) {
-    .sobre{
-        margin-top: 50vh;
-    }
-
 }
