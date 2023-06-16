@@ -33,8 +33,33 @@ body{
     outline: none;
     cursor: pointer;
   }
-  
-  
+  .menu{
+    width: 4%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    
+  }
+  .buttonmenu{
+
+    width:80% ;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+    background-color: #00B2FF;
+    cursor: pointer;
+    margin-left: 15%;
+
+  }
+ 
+  .buttonmenu:hover{
+    background-color: #01859cfb;
+}
   
   .checkbox-tarefa:checked::before {
     
@@ -73,11 +98,12 @@ body{
     margin-left: 5px;
     border: none;
     border-radius: 10px;
-    border: 1px solid ;
     background: white;
-
     color: white;
     cursor: pointer;
+  }
+  .btnAcao3:hover{
+    background-color: rgb(214, 214, 214);
   }
 
 header{
@@ -104,9 +130,10 @@ h3{
     width: 100%;
     height: 30px;
     margin-left: 6%;
-    margin-top: 2%;
+    margin-top: 1%;
    align-items: center;
     display: flex;
+    
 }
 .logo{
     margin-left: 10px;
@@ -205,12 +232,10 @@ h3{
 }
 
 .divleft {
+    position: absolute;
     width: 16%;
-    height: 90vh;
-    
-    
-}
-.boxleft{
+    height: 93vh;
+    display: none;
     width: 14%;
     position: fixed;
     top: 6.8%;
@@ -221,12 +246,17 @@ h3{
     
     
 }
+
+
+
 .divright{
-    width: 84%;
+    width: 100%;
     height: 90vh;
     list-style: none;
     display: block;
+     
 }
+
 
 .links{
    margin-top: 20px;
@@ -241,11 +271,22 @@ a{
 .user{
     border: none;
     background-color: white;
-    
+    width: 35%;
+    height: 70px;
+    border-radius: 8px;
+}
+.user:hover{
+    background-color: rgb(204, 204, 204);
 }
 .tasks{
     border: none;
     background-color: white;
+    width: 35%;
+    height: 70px;
+    border-radius: 8px;
+}
+.tasks:hover{
+    background-color: rgb(204, 204, 204);
 }
 .button{
     width: 70%;
@@ -280,7 +321,7 @@ a{
     height: 60vh;
     display: none;
     margin-top: 50px;
-    margin-left: 20%;
+    margin-left: 36%;
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0px 10px 40px #a3a3a3;
@@ -310,6 +351,7 @@ a{
 }
 .tarefas> h2{
     margin-top: 30px;
+    margin-left:0;
 }
 .tarefas> input{
     
@@ -345,7 +387,7 @@ a{
 }
   li {
    
-    width: 75%;
+    width: 60%;
     margin-top: 10px;
     height: 50px;
     margin-right:auto;
@@ -354,9 +396,7 @@ a{
     border-width: 0.5px;
     border-color: #c5c5c5;
     outline: none;
-    
     border-style: double;
-    
     justify-content: space-between;
     display: flex;
     align-items: center;
@@ -366,6 +406,7 @@ a{
   .descricaoTarefa{
     height: 60px;
     width: 40%;
+    margin-right: 5%;
   }
  
   
@@ -690,137 +731,36 @@ a{
     display: none;
 }
 
-@media(min-width: 480px)and (max-width:1800px){
-    /*.divleft{
-        width: 16%;
-        text-align: center;
-    }
-}
-    @media(max-width: 500px){
-    .divleft{
+@media(min-width:0px) and (max-width: 480px){
+    .container{
         width: 100%;
-        text-align: center;
-    }
-    .modal{
-        margin-left: 0;
-        width: 100%;
-    }
-  
-    }
-    /*Página de login*/
-    .card-login{
-        width: 85%;
-    }
-    /*.container{
-        width: 50%;
-        height: auto;
-    }
-    .input-group{
+        height: 100%;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-        overflow-y: scroll;
-        flex-wrap: nowrap;
-        max-height: 10rem;
-        padding-right: 5rem;
-        font-size: 12px;
+        display: flex;
+
     }
     .gender-inputs{
-        margin-top: 2rem;
-        font-size: 12px;
+        display: none;
     }
-    .gender-group{
-        flex-direction: column;
-        font-size: 12px;
-    }
-    .gender-input{
-        margin-top: 0.5rem;
-        font-size: 12px;
-    }
-
-    /*Página de cadastro*/
-    
-@media (max-width: 480px) {
-  header {
-    flex-direction: initial;
-  }
-  .tnotes{
-    display: none;
-  }
-  .menu {
-    margin-bottom: 10px;
-    
-  }
-
-  .keyword-search {
-    width: 100%;
-  }
-  
-}
-@media (max-width: 1768px) {
-    .menu{
-        width: 50px;
-    }
-}
-@media (max-height: 600px) {
-    .sobre{
-        margin-top: 50vh;
-    }
-
-}
-@media(min-width:481px) and (max-width:768px){
-    /*Página cadastro*/
-    .container{
-        width: 100vw;
-        height: 100vh;
-        flex-direction: column;
-        display: flex;
-    }
-
-    .divLefCad{
-        width: 100%;
-        height: auto;
-    }
-
-    .form-image{
-        width: 100vw;
-    }
-
-    .form-image img{
-        width: 400px;
-        height: 327px;
-        margin: 0%;
-        padding: 10%;
-    }
-
-
-    .divRigCad{
-        width: 100vw;
-        height: auto;
-    }
-    
-
     .form{
         width: 100%;
-        height: auto;
         font-size: 10px;
         background-color: white;
-        padding: 0%;
+    }
+    .form-image{
+        width: 50%;
+        height: 50%;
+        display: none;
+    }
+    .textCad{
+        width: 50%;
+        height: 50%;
         
     }
-    .form > form{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .input-group{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .input-box{
-        margin-bottom: 0%;
-    }
+}
+@media(min-width:481px) and (max-width:768px){
     .gender-inputs * label{
         font-size: 12px;
         margin: 2px;
@@ -831,8 +771,7 @@ a{
         margin: 2px;
 
     }
-
-    .main-login{
+.main-login{
         flex-direction: column;
     }
 
@@ -844,7 +783,6 @@ a{
     }
     .form-header{
         justify-content: center;
-
     }
     form-image{
         width: 50vw;
@@ -873,21 +811,30 @@ a{
         width: 90%;
     }
     /*Página principal*/
-    .modal{
-        width: 80%;
-  }
+    
 }
-@media(min-width: 769px) and (max-width: 1279px){
+
+@media(min-width: 480px)and (max-width:1800px){
     .divleft{
-        width: 50%;
+        width: 16%;
         text-align: center;
     }
-
-   
+}
+    @media(max-width: 500px){
+    .divleft{
+        width: 100%;
+        text-align: center;
+    }
+    .modal{
+        margin-left: 0;
+        width: 100%;
+    }
+  
+    }
+    /*Página de login
     .card-login{
         width: 85%;
-    } 
-    /*
+    }
     .container{
         width: 50%;
         height: auto;
@@ -914,6 +861,7 @@ a{
     }
 
     /*Página de cadastro*/
+    @media(min-width: 769px) and (max-width: 1279px){
     .imagecad{
         width: 80vw;
         height: 80%;
@@ -935,29 +883,12 @@ a{
     }
     .input-group{
         width: 50vw;
-        height: auto;
-        flex-wrap: nowrap;
+        height: 50vh;
         overflow-y: scroll;
         justify-content: center;
-        flex-direction: column;
-    }
-    .input-box{
-        align-items: center;
     }
     .form-header{
         justify-content: center;
-    }
-    .input-box{
-        padding: 5px;
-    }
-    .form{
-        padding: 20px;
-    }
-    .buttonCad{
-        width: 50vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 }
 
@@ -972,10 +903,33 @@ a{
     .textCad * h4{
         font-size: 24px;
     }
-    .form{
-        padding: 1vw;
+    
+}
+@media (max-width: 480px) {
+  header {
+    flex-direction: initial;
+  }
+  .tnotes{
+    display: none;
+  }
+  .menu {
+    margin-bottom: 10px;
+    
+  }
+
+  .keyword-search {
+    width: 100%;
+  }
+  
+}
+@media (max-width: 1768px) {
+    .menu{
+        width: 50px;
     }
-    .input-box{
-        padding: 2px;
+}
+@media (max-height: 600px) {
+    .sobre{
+        margin-top: 50vh;
     }
+
 }
